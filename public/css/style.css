@@ -1,0 +1,579 @@
+a, img {
+    outline: none;
+}
+a:focus,
+img:focus {
+    outline: none;
+}
+
+body {
+    background: #f5f5f5 url("../images/noisy-grid.jpg");
+}
+
+/*Bootstrap*/
+.btn,
+.form-control
+{
+    border-radius: 0;
+}
+
+.container {width: 1170px;}
+.container-fluid {min-width: 1170px;}
+.top-content {margin-bottom: 5px;}
+.error, .field-required {color: red;}
+.field-error, .form-control.error {border: red solid 1px !important;}
+
+/*.message-wrapper { display: none;}*/
+.message {
+    margin: 15px 0;
+}
+
+.message p {
+    padding: 10px 25px;
+}
+
+h1 {font-size: 24px !important;}
+h1.page-title,
+.page-description
+{
+    text-align: center;
+}
+
+h3, .h3 {
+    font-size: 20px;
+}
+
+a.edit-ticket-link {
+    width: 66px;
+}
+
+a.edit-user-status {
+    width: 24px;
+    height: 22px;
+}
+
+a.disabled
+{
+    cursor: not-allowed;
+    opacity: .65;
+    pointer-events: none;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*Blocks*/
+
+span.field-label {
+    font-weight: bold;
+}
+.block h3 a,
+span.field-item a {
+    margin-left: 4px;
+}
+
+.concert-list img {
+    width: 100%;
+}
+
+/*FORMS*/
+form span.ok {
+    background: url("../images/ok.png") no-repeat center;
+    width: 34px;
+    height: 34px;
+    float: right;
+    margin-top: -34px;
+    margin-right: 17px;
+    background-size: 50%;
+    display: none;
+}
+
+form > input {
+    margin-left: 15px;
+    margin-right: -15px;
+}
+
+label.error {
+    font-weight: normal !important;
+}
+
+.form-wrapper {
+    /*max-width: 30%;*/
+    margin: 15px 0;
+}
+
+label.display-none {
+    position: relative;
+    z-index: -9999;
+}
+
+form#edit-price .form-item-l_row,
+form#edit-price .form-item-l_seat,
+form#edit-price input#update,
+form#edit-price input#cancel,
+form#edit-price input#save
+{
+    /*float: left;*/
+}
+
+form#edit-price .form-item-l_row,
+form#edit-price .form-item-l_seat,
+form#edit-price input#update,
+form#edit-price input#save
+{
+    clear: both;
+}
+
+form#edit-price input#update,
+form#edit-price input#save {
+    margin-right: -10px;
+}
+
+.form-item-imgthumb .description {
+    border: #CCC solid 1px;
+    padding: 15px;
+}
+
+table .form-wrapper {
+    margin: 0;
+}
+
+table tr td a{
+  margin:0 2px;
+}
+
+/* Current order */
+#current-order,
+#current-order form button.b-cancel,
+#current-order input#save,
+#current-order .field-afterPrint
+{display: none;}
+
+#current-order .field-beforePrint,
+#current-order .field-afterPrint
+{
+  border: #A6A6A6 solid 1px;
+  border-left: none;
+  border-right: none;
+  padding: 10px 15px;
+  margin: 10px 0 0;
+}
+
+form a#print-ticket {margin-left: 15px;}
+form .b-close {margin-left: 20px;}
+
+#current-order input#reserved {
+    margin-left: 0;}
+
+
+/*Toltip*/
+#easyTooltip{
+    padding:5px 10px;
+    border:1px solid #195fa4;
+    background:#195fa4 url(bg.gif) repeat-x;
+    color:#fff;
+}
+
+#easyTooltip2{
+    padding:5px 10px;
+    border:1px solid #5e5e5e;
+    background:#5e5e5e url(bg2.gif) repeat-x;
+    color:#fff;
+    width:250px;
+}
+#easyTooltip2 h4, #easyTooltip2 p{
+    margin:.25em 0;
+}
+
+.concert-list-item {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.block-concert-info img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/*Halls*/
+.selling-info .label {
+    color: #000;
+}
+
+.content-wrapper,
+.sidebar-wrapper,
+.page-title-wrapper
+{
+
+}
+
+.content-wrapper,
+.sidebar-wrapper
+{
+
+}
+
+.page-wrapper {
+    background-color: #fff;
+    /*
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    */
+    /*border-right: none;
+    border-left: none;*/
+    display: inline-block;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    padding-bottom: 25px !important;
+}
+
+/*Header*/
+.header-wrapper {
+    min-height: 6px;
+    background:#F5F5F5 url('../images/funnyline.png') top repeat-x;
+    height: 110px;
+
+}
+
+/*Menu*/
+.menu-wrapper {
+    margin: 0 auto;
+    padding: 13px 0;
+    overflow: hidden;
+    background: #52B3D4;
+    display: inline-block;
+}
+.main-menu {
+    float: left;
+}
+
+.main-menu ul li a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 16px;
+
+    -webkit-transition: background 0.2s ease-out 0s;
+    -moz-transition: background 0.2s ease-out 0s;
+    -o-transition: background 0.2s ease-out 0s;
+    transition: background 0.2s ease-out 0s;
+}
+
+.main-menu ul li a:hover,
+.main-menu ul li a:active,
+.main-menu ul li a.active,
+.main-menu ul li a:focus {
+    color: #f5f5f5;
+    background: #3197B9;
+    text-decoration: none;
+}
+
+.user-menu {
+    float: right;
+    padding: 10px 0;
+}
+
+.user-menu li {
+    margin-left: 4px;
+}
+
+.user-menu ul li,
+.main-menu ul li,
+.admin-menu ul li
+{
+    list-style: none;
+    float: left;
+}
+
+/*Admin menu*/
+.admin-menu-wrapper {
+    background: #000;
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    top:0px;
+    z-index: 99;
+}
+
+.admin-menu {
+    display: inline-block;
+}
+
+.admin-menu ul li {
+
+}
+.admin-menu a {
+    color: #fff;
+    margin-right: 2px;
+    font-size: 12px;
+    padding: 7px 10px;
+}
+
+.admin-menu a i {
+    display: inherit;
+}
+
+.admin-menu a:hover,
+.admin-menu a.active {
+    background: #444;
+    text-decoration: underline;
+}
+
+/*BOX styles*/
+.hall-wrapper {
+    position: relative;
+}
+.box {
+    border: #c0c0c0 solid 1px;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+}
+
+.box-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.row-label-wrapper {
+    position: absolute;
+    top: 23px;
+    left: 5px;
+    font-size: 10px;
+}
+
+.row-label {
+    height: 16px;
+    margin: 4px 0;
+}
+
+.seats-wrapper {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.row-wrapper {
+    display: block;
+    clear: both;
+}
+.seat {
+    color: #fff;
+    font-size: 12px;
+    font-family: monospace;
+    cursor: pointer;
+    text-align: center;
+    margin: 1px;
+    height: 18px;
+    width: 19px;
+    float: left;
+}
+
+.marker-show {
+    border: #989898 solid 1px;
+    background: #c0c0c0;
+    cursor: auto;
+}
+.marker-warning,
+.marker-reserved
+{
+    background-color: #FFC000;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    cursor: text;
+}
+.marker-warning {background-image:url("../images/warning-seat.png");}
+.marker-reserved {background-image:url("../images/warning-reserve.png");}
+
+.marker-sold {
+    background: #cacaca;
+    background: -moz-linear-gradient(top, #cacaca 0%, #d1d1d1 51%, #dbdbdb 51%, #dbdbdb 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #cacaca), color-stop(51%, #d1d1d1), color-stop(51%, #dbdbdb), color-stop(100%, #dbdbdb));
+    background: -webkit-linear-gradient(top, #cacaca 0%, #d1d1d1 51%, #dbdbdb 51%, #dbdbdb 100%);
+    background: -o-linear-gradient(top, #cacaca 0%, #d1d1d1 51%, #dbdbdb 51%, #dbdbdb 100%);
+    background: -ms-linear-gradient(top, #cacaca 0%, #d1d1d1 51%, #dbdbdb 51%, #dbdbdb 100%);
+    background: linear-gradient(to bottom, #cacaca 0%, #d1d1d1 51%, #dbdbdb 51%, #dbdbdb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#dbdbdb', GradientType=0 );
+    cursor: text;
+    border: #B8B8B8 solid 1px;
+    text-indent: -9999px;
+}
+
+.marker-0 {background-color: #b5a300;}
+.marker-1 {background-color: #0000FF;}
+.marker-2 {background-color: #FF8E56;}
+.marker-3 {background-color: #FF00FF;}
+.marker-4 {background-color: #00AEEF;}
+.marker-5 {background-color: #2F8C4A;}
+.marker-6 {background-color: #FFD700;}
+.marker-7 {background-color: #FF0000;}
+
+.price-list-wrapper {
+    display: inline-block;
+    /* width: 100%; */
+    clear: both;
+    border: #c0c0c0 solid 1px;
+    padding:5px;
+    margin-bottom: 5px;
+}
+.price-list-wrapper .price-list-item {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.price-list-wrapper .marker {
+    width: 19px;
+    height: 19px;
+    display: block;
+    float: left;
+    margin-right: 3px;
+}
+
+.price-list-wrapper .specific-markers {
+    display: inline-block;
+    clear: both;
+    width: 100%;
+}
+
+/*MBK*/
+.hall-wrapper > .hall-mbk {
+    height: 710px;
+}
+.hall-mbk .box-balkon,
+.hall-mbk .box-center,
+.hall-mbk .box-left,
+.hall-mbk .box-right
+{
+    position: absolute;
+}
+.box-balkon .seats-wrapper {
+    margin-left: 59px;
+}
+
+.price-list-wrapper,
+.hall-mbk .box-balkon {
+    width: 812px;
+}
+.hall-mbk .box-balkon {
+    top: 0;
+    left: 0px;
+    padding-left: 48px;
+
+}
+
+.hall-mbk .box-balkon .row-label-wrapper
+{
+    left: 48px;
+}
+
+.hall-mbk .box-balkon .row-wrapper-1,
+.hall-mbk .box-balkon .row-wrapper-2,
+.hall-mbk .box-balkon .row-wrapper-3
+{
+    padding-left: 54px;
+}
+
+/*CENTER*/
+.hall-mbk .box-center {
+    top: 117px;
+    left: 65px;
+    width: 681px;
+}
+
+.hall-mbk .box-center .seat-14,
+.hall-mbk .box-center .row-19.seat-13,
+.hall-mbk .box-center .row-20.seat-12,
+.hall-mbk .box-center .row-21.seat-12,
+.hall-mbk .box-balkon .row-1.seat-12,
+.hall-mbk .box-balkon .row-2.seat-12,
+.hall-mbk .box-balkon .row-3.seat-12
+{
+    margin-right: 32px;
+}
+
+.hall-mbk .box-center .row-11.seat-10,
+.hall-mbk .box-center .row-12.seat-10
+{
+    margin-right: 116px;
+}
+
+.hall-mbk .box-center .row-11.seat-14,
+.hall-mbk .box-center .row-12.seat-14,
+.hall-mbk .box-center .row-19.seat-14,
+.hall-mbk .box-center .row-20.seat-14,
+.hall-mbk .box-center .row-21.seat-14
+{
+    margin-right: 1px;
+}
+
+.hall-mbk .box-center .row-wrapper-13,
+.hall-mbk .box-center .row-wrapper-20 {
+    margin-bottom: 40px;
+}
+
+.hall-mbk .box-center .row-label-13,
+.hall-mbk .box-center .row-label-20
+{
+    margin-bottom: 25px;
+}
+
+.hall-mbk .box-center .row-19.seat-1
+{
+    margin-left: 22px;
+}
+
+.hall-mbk .box-center .row-20.seat-1,
+.hall-mbk .box-center .row-21.seat-1
+{
+    margin-left: 42px;
+}
+
+    /* LEFT */
+.hall-mbk .box-left,
+.hall-mbk .box-right
+{
+    top: 117px;
+    width: 60px;
+    padding: 5px 20px;
+}
+
+.hall-mbk .box-left {
+    left: 0;
+}
+
+.hall-mbk .box-right {
+    left: 752px;
+}
+
+.hall-mbk .box-left .row-label-wrapper,
+.hall-mbk .box-right .row-label-wrapper
+{display: none;}
+
+.hall-mbk .box-left .seats-wrapper,
+.hall-mbk .box-right .seats-wrapper{
+    margin-left: 0;
+    margin-top: 38px;
+}
+
+.hall-mbk .box-left .seats-wrapper .seat {
+    float: none;
+}
+
+.hall-mbk .box-right {
+
+}
+
+.hall-mbk .box-scene {
+    top: 614px;
+    left: 64px;
+    width: 682px;
+    text-align: center;
+}
+
+header h1 {
+    float: left;
+}
