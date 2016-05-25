@@ -25,8 +25,8 @@ $(document).ready(function() {
         var addImgField = $('#form-edit-account .form-item-img').remove();
 
         deleteImgLink.click(function(){
-
             thumbField.after(addImgField).remove();
+            $('#form-edit-account input#avatar_have').remove();
             return false;
         });
     }

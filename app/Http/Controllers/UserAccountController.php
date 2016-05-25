@@ -124,6 +124,11 @@ class UserAccountController
       ]);
 
       //Img field
+	    $fields[] = Forms::field([
+		    'id' => 'avatar_have',
+		    'type' => 'hidden',
+		    'value' => true
+	    ]);
       $fields[] = $imgField;
     }
     else
@@ -167,7 +172,7 @@ class UserAccountController
 		$account->city_id = $request->city_id;
 		$account->gender = $request->gender;
     //save img
-    $account->avatar = $request->file('img') ? $this->setAvatar($request) : '';
+    $account->avatar = $this->setAvatar($request,$account->avatar);
 
 		$account->save();
 
@@ -183,25 +188,29 @@ class UserAccountController
 
   private function setAvatar($request, $imgField = null)
   {
-    if($request->file('img'))
-    {
-      $dt = Carbon::parse(Auth::user()->created_at);
-      $dateTimestamp = $dt->timestamp;
+	  if($request->file('img'))
+	  {
+		  $date = $request->date;
+		  $time = $request->time;
+		  $dt = Carbon::parse($date);
+		  $event_date = $dt->timestamp + $time;
 
-      $this->avatar->input($request->file('img'))
-        ->fileName($dateTimestamp)
-        ->move($this->dirName)
-        ->resize($this->w_img, $this->h_img, false);
+		  $this->avatar->input($request->file('img'))
+			  ->fileName($event_date)
+			  ->move($this->dirName)
+			  ->resize($this->w_img, $this->h_img, false);
 
-      return $this->avatar->getFileName();
-    }
-    else
-    {
-      if(!$request->file('img') && !empty($imgField))
-        $this->avatar->delete($this->dirName,$imgField);
+		  return $this->avatar->getFileName();
+	  }
+	  elseif($request->avatar_have)
+		  return $imgField;
+	  else
+	  {
+		  if(!$request->file('img') && !empty($imgField))
+			  $this->avatar->delete($this->dirName,$imgField);
 
-      return '';
-    }
+		  return null;
+	  }
   }
 
 
