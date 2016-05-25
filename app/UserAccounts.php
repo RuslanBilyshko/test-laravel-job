@@ -30,7 +30,7 @@ class UserAccounts extends Model {
 				$timestamp = $query->date;
 				$dt = Carbon::createFromTimestamp($timestamp);
 				$day = $dt->day;
-				$month = $dt->month - 1;
+				$month = $dt->month - 2;
 				$year = $dt->year;
 				$date = $day.' '.trans('months.'.$month).' '.$year;
 				$data['date'] = $date;
